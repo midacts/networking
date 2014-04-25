@@ -1,0 +1,28 @@
+# This file is managed by the Puppet Master puppet.midacts.com
+# Any changes to this file will be overwritten
+#
+# If you need any additional assistance, please contact your system
+# administrator or the Puppet Master
+#
+# == Author
+#
+# John McCarthy <midactsmystery@gmail.com>
+#
+# - http://www.midactstech.blogspot.com -
+# - https://www.github.com/Midacts -
+#
+# == Date
+#
+# 24th of April, 2014
+#
+# -- Version 1.0 --
+#
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet static
+        address <%= @ipaddress %>
+        netmask 255.255.255.0
+        gateway 192.168.x.x
+        dns-nameservers 192.168.x.x
